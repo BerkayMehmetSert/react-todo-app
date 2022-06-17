@@ -1,38 +1,270 @@
-.App {
+.home-page, .todo-page {
+  padding: 16px;
+}
+
+.home-page_title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #001018;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.todo-page_title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #001018;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.home-page_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.home-page_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #001018;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.border {
+  height: 2px;
+  width: 100%;
+  background-color: #D9DDE1;
+  margin: 16px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-completed-item {
+  font-size: 16px;
+  color: #001018;
+}
+
+.completed {
+  color: #B3BAC3;
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: #687787;
+  margin-top: 4px;
+}
+
+.action-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #00689D;
+  color: #F7F8F9;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #00537D;
+}
+
+.btn-primary:disabled {
+  background-color: #D9DDE1;
+  color: #B3BAC3;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  margin: 0 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FD9297;
+  color: #AB0009;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  background-color: #AB0009;
+  color: #fff;
+}
+
+.check-btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #88D77F;
+  color: #256C1D;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.check-btn:hover {
+  background-color: #256C1D;
+  color: #fff;
+}
+
+.onlyMe-btn {
+  margin-right: 16px;
+  background-color: transparent;
+  color: #001018;
+}
+
+.empty-todo {
+  background-color: #E7F3F9;
+  height: 48px;
+  padding: 16px;
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+}
+
+.empty-todo-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3D9ACC;
+  text-align: center;
+}
+
+.completed-btn {
+  margin-right: 16px;
+}
+
+.unCompleted-btn {
+  margin-right: 16px;
+}
+
+.btn {
+
+  color: #001018;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  margin-right: 16px;
+}
+
+.false {
+
+  color: #B3BAC3;
+}
+
+.true {
+  background-color: #00689D;
+  color: #fff;
+}
+
+.page-not-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+}
+.page-not-title{
+  font-size: 50px;
+  font-weight: 700;
+  color: #001018;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  border-bottom: 1px solid #D9DDE1;
+  padding-bottom: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  color: #001018;
+  text-align: center;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+input[type='checkbox']:disabled {
+  background-color: #D9DDE1;
+  color: #B3BAC3;
+  cursor: not-allowed;
+}
+
+input[type="text"], input[type="password"] {
+  width: 300px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #B3BAC3;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #001018;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid #3D9ACC;
+}
+
+span {
+  color: #00689D;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+b {
+  font-weight: 700;
+  color: #00689D;
+  text-decoration: underline;
+  font-size: 14px;
 }
